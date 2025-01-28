@@ -43,7 +43,11 @@ const blogPostSchema = new mongoose.Schema({
     type: [String],
     default: []
   },
-  comments: [commentSchema],
+  comments: {
+    type : [commentSchema],
+    default : []
+  } ,
+
   createdAt: {
     type: Date,
     default: Date.now
